@@ -1,0 +1,24 @@
+{
+  "name": "dentolo-qa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuvarajMohanbabu/Dentolo-QA.git"
+  },
+  "author": "yuvaraj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YuvarajMohanbabu/Dentolo-QA/issues"
+  },
+  "homepage": "https://github.com/YuvarajMohanbabu/Dentolo-QA#readme",
+  "devDependencies": {
+    "cypress": "^9.5.1",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-mailosaur": "^2.7.0"
+  }
+}

@@ -1,0 +1,8 @@
+{
+    "baseUrl": "https://account-beta3.dentolo.de",
+  
+    "env": {
+      "MAILOSAUR_API_KEY": "CZDaiYkxyMBgmnzw"
+    }
+  }
+  
