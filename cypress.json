@@ -1,8 +1,16 @@
 {
-    "baseUrl": "https://account-beta3.dentolo.de",
-  
-    "env": {
-      "MAILOSAUR_API_KEY": "CZDaiYkxyMBgmnzw"
-    }
+  "baseUrl": "https://account-beta3.dentolo.de",
+  "reporter": "mochawesome",
+  "defaultCommandTimeout": 8000,
+  "pageLoadTimeout": 10000,
+  "chromeWebSecurity": false,
+  "reporterOptions": {
+    "overwrite": false,
+    "html": true,
+    "json": false
+  },
+
+  "env": {
+    "MAILOSAUR_API_KEY": "CZDaiYkxyMBgmnzw"
   }
-  
+}

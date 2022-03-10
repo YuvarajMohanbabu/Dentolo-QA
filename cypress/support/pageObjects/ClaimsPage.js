@@ -9,7 +9,7 @@ export const selectSkipOnBoardingButton = () => {
 export const getNewClaimsButton = () => {
   return cy.get('[href="/user-claims/dentolo/new"]');
 };
-export const SelectRadioButtonOption = () => {
+export const selectRadioButtonOption = () => {
   return cy.get("#u3-radio-button-0");
 };
 export const getContinueButton = () => {
@@ -21,7 +21,6 @@ export const getInvoiceAmountInput = () => {
 };
 export const getWeiterButton = () => {
   return cy.get(' [class="u3-btn btn-primary u3-ml-1 btn-sm"]');
-  
 };
 export const getErrorMessage = () => {
   return cy.get('[class="u3-dateinput__error-message u3-mt-1"]');
@@ -41,22 +40,21 @@ export const getSuccessStatusMessage = () => {
   );
 };
 export const getSumbitButton = () => {
-  return cy.get('[class="u3-btn btn-primary btn-sm btn-primary btn-sm"]')
+  return cy.get('[class="u3-btn btn-primary btn-sm btn-primary btn-sm"]');
 };
 
-export const SuccessScreenBanner = () => {
-  return cy.get('[class="shadow-02dp bg-white u3-info-window u3-mb-2"]')
+export const successScreenBanner = () => {
+  return cy.get('[class="shadow-02dp bg-white u3-info-window u3-mb-2"]');
 };
 export const getBackToStartButton = () => {
-  return cy.get('[class="btn-sm u3-mt-1 u3-mt-md-2 u3-mb-1 u3-mb-md-2 btn-outline"]')
+  return cy.get(
+    '[class="btn-sm u3-mt-1 u3-mt-md-2 u3-mb-1 u3-mb-md-2 btn-outline"]'
+  );
 };
 
 export const getClaimStatus = () => {
-  return cy.get('[class="u3-label-tag u3-label-tag-warning align-self-start"]')
+  return cy.get('[class="u3-label-tag u3-label-tag-warning align-self-start"]');
 };
 export const getClaimDate = () => {
-  return cy.get(":nth-child(1) > .u3-claim-status > .u3-btn")
+  return cy.get(":nth-child(1) > .u3-claim-status > .u3-btn");
 };
-
-
-

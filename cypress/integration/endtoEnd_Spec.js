@@ -14,8 +14,7 @@ import {
   getClaimsSection,
   selectSkipOnBoardingButton,
   getNewClaimsButton,
-  SelectRadioButtonOption,
-  weiterButton,
+  selectRadioButtonOption,
   getInvoiceAmountInput,
   getContinueButton,
   getErrorMessage,
@@ -25,7 +24,7 @@ import {
   getFailureStatusMessage,
   getSuccessStatusMessage,
   getSumbitButton,
-  SuccessScreenBanner,
+  successScreenBanner,
   getClaimStatus,
   getClaimDate,
   getBackToStartButton,
@@ -53,11 +52,8 @@ const dayjs = require("dayjs");
 const DateValue = dayjs().format("DD.MM.YYYY");
 
 describe("Test suite", () => {
-  it("Homepage", () => {
+  it("Submit a new claim", () => {
     cy.visit("/login");
-
-    cy.wait(5000)
-    
     emailInputField().type(emailAddress);
     sendRegistrationLinkButton().click();
     mailServer.getMagicloginLink();
@@ -77,7 +73,8 @@ describe("Test suite", () => {
     cy.location().should((location) => {
       expect(location.pathname).to.eq("/user-claims/dentolo/new");
     });
-    SelectRadioButtonOption().click().should("be.checked"); //change to click
+
+    selectRadioButtonOption().click().should("be.checked");
     getContinueButton().click();
     cy.location().should((location) => {
       expect(location.pathname).to.eq("/user-claims/dentolo/new/cleaning-form");
@@ -107,12 +104,13 @@ describe("Test suite", () => {
     getFailureStatusMessage()
       .contains("Datei zu groß (max. 10 MB)")
       .should("be.visible");
-    cy.wait(500);
 
     getSumbitButton().should("be.disabled");
     getFileUploadButton().attachFile(validPdfFile, {
       subjectType: "drag-n-drop",
     });
+    cy.wait(2000);
+
     getUploadedFiles().eq(1).should("have.contain", validPdfFile);
     getSuccessStatusMessage()
       .contains("Bereit zum Absenden")
@@ -122,7 +120,7 @@ describe("Test suite", () => {
     cy.location().should((location) => {
       expect(location.pathname).to.eq("/user-claims/file-upload/success");
     });
-    SuccessScreenBanner().should("be.visible");
+    successScreenBanner().should("be.visible");
 
     getBackToStartButton()
       .contains("Zurück zur Startseite")
@@ -134,12 +132,11 @@ describe("Test suite", () => {
     });
     cy.reload(true);
 
-    
     getClaimStatus().eq(0).contains("Auszahlung").should("be.visible");
     cy.log(DateValue);
     getClaimDate().eq(0).contains(DateValue).should("be.visible");
 
-    cy.wait(8000)
+
     mailServer.getFileUploadEmailAndDisplay();
 
     cy.clearLocalStorage();
