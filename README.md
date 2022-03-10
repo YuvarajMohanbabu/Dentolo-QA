@@ -25,6 +25,8 @@ A repository to automate tests for Submitting a claim.
 - Combines functional testing with API inspection.
 - Videos or Screenshots– View screenshots are taken automatically on collapse and videos of your complete test
 
+**Note** : Didn't connect the test with Cypress Dashboard due to data privacy concerns
+
 ### Running the Test
 
 **Pre-requisite** - Need cypress and nodejs installed
