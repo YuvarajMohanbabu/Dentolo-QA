@@ -29,7 +29,7 @@ A repository to automate tests for Submitting a claim.
 
 **Pre-requisite** - Need cypress and nodejs installed
 
-open terminal and enter 
+open terminal on the test folder path and enter 
 
        npx cypress open
 
