@@ -31,9 +31,9 @@ A repository to automate tests for Submitting a claim.
 
 open terminal and enter 
 
-       npx cypress open & click enter
+       npx cypress open
 
-A test runner will open then you can find all your test folders on left side ,just click casparHealth_Spec.js
+A test runner will open then you can find all your test folders on left side ,just click endtoEnd_Spec.js
 
 A new chrome window opens and test run on it
 
