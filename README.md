@@ -1,1 +1,38 @@
 # Dentolo-QA
+A repository to automate tests for Submitting a claim.
+
+**Tool used to Automate :** Cypress version 9.5.1
+
+**Programming Langauge :** JavaScript / Nodejs
+
+**Type of Framework :** Page object model and data driven framework
+
+**POM:** As per the page object model, I have maintained a class for every web page. Each web page has a separate class which holds functionalities and members of that web page
+
+**Packages:** Cypress has inbuild packages like fixtures where we can use for test data,support to maintain our page objects,integrations to have our spec files
+
+**Plugins used:** Mailosaur(Virtual SMTP servers to test account verification emails), cypress-file-upload(To upload files)
+
+**Test Report:** Mochaawesome report
+
+**Package.json file:** This will help to make it easy for others to manage and install the npm.
+
+**Note:** Pass and Fail report is available in mochawesome-report folder
+
+### Running the Test
+
+**Pre-requisite** - Need cypress and nodejs installed
+
+open terminal and enter 
+
+       npx cypress open & click enter
+
+A test runner will open then you can find all your test folders on left side ,just click casparHealth_Spec.js
+
+A new chrome window opens and test run on it
+
+## Reports
+
+Once the complete Test ran Successfully report will be generated under mochawesome-report folder .
+
+Sample Pass & Fail Reports are included in the same Folder.
