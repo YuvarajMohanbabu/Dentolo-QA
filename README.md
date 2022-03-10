@@ -17,7 +17,13 @@ A repository to automate tests for Submitting a claim.
 
 **Package.json file:** This will help to make it easy for others to manage and install the npm.
 
-**Note:** Pass and Fail report is available in mochawesome-report folder
+**Advantages of Cypress**
+
+- Cypress automation is simple to setup.
+- Faster test execution
+- We can debug dircetly with developer tools.
+- Combines functional testing with API inspection.
+- Videos or Screenshots– View screenshots are taken automatically on collapse and videos of your complete test
 
 ### Running the Test
 
