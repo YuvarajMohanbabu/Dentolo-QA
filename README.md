@@ -34,10 +34,18 @@ A repository to automate tests for Submitting a claim.
 open terminal on the test folder path and enter 
 
        npx cypress open
-
+       
 A test runner will open then you can find all your test folders on left side ,just click endtoEnd_Spec.js
 
 A new chrome window opens and test run on it
+
+**Run & Generate Report:**
+
+    npx cypress run --headed --browser chrome
+
+**To run headless:**
+
+        npm run test --headless
 
 ## Reports
 
