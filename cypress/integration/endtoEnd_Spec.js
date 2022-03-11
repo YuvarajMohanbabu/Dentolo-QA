@@ -36,6 +36,7 @@ import {
 
 import Utils from "../support/utilities/DatePicker.js";
 import Login from "../support/utilities/MailServer.js";
+import Consent from "../support/utilities/ConsentPopup.js";
 import config from "../support/config.js";
 
 const { invalidPdfFile, validPdfFile } = config.PdfFiles;
@@ -48,12 +49,15 @@ const {
 } = config.UserInputs;
 const dateInputField = new Utils();
 const mailServer = new Login();
+const consentPopup = new Consent();
 const dayjs = require("dayjs");
 const DateValue = dayjs().format("DD.MM.YYYY");
 
 describe("Test suite", () => {
   it("Submit a new claim", () => {
     cy.visit("/login");
+    consentPopup.getConsentScreenAndClick();
+
     emailInputField().type(emailAddress);
     sendRegistrationLinkButton().click();
     mailServer.getMagicloginLink();
@@ -135,7 +139,6 @@ describe("Test suite", () => {
     getClaimStatus().eq(0).contains("Auszahlung").should("be.visible");
     cy.log(DateValue);
     getClaimDate().eq(0).contains(DateValue).should("be.visible");
-
 
     mailServer.getFileUploadEmailAndDisplay();
 
